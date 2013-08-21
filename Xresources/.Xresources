@@ -1,0 +1,10 @@
+URxvt.background: #3e3e3e
+Urxvt.foreground: #ffffff
+Urxvt.scrollBar: false
+Urxvt.saveLines: 1000
+Urxvt.font: xft:Ubuntu:pixelsize=16:antialias=true
+URxvt.perl-lib: /usr/lib/urxvt/perl/
+URxvt.perl-ext-common:  default,tabbed,clipboard
+
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste

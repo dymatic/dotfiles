@@ -16,3 +16,13 @@ emacs:
 xmobar:
 	if [ -a ~/.xmobarrc]; then rm ~/.xmobarrc; fi;
 	cp ./xmobar/.xmobarrc ~/
+
+.PHONY: bashrc
+bashrc:
+	if [ -a ~/.bashrc]; then rm ~/.bashrc; fi;
+	cp ./bashrc/.bashrc ~/
+
+.PHONY: xresources
+xresources:
+	if [ -a ~/.Xresources]; then rm ~/.Xresources; fi;
+	cp ./Xresources/.Xresources ~/
