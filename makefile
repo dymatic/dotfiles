@@ -1,4 +1,4 @@
-all: i3 emacs xmobar
+all: i3 emacs xmobar bashrc xresources
 
 .PHONY: i3
 i3:
