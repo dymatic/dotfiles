@@ -33,8 +33,18 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run  -i -nb '#000000' -nf '#44829f' -sb '#000000' -sf '#c09d12' -p '$'
 
 #Volume control buttons
-bindsym $mod+Shift+s exec amixer set Master 1%+
 bindsym $mod+Shift+a exec amixer set Master 1%-
+bindsym $mod+Shift+s exec amixer set Master 1%+
+
+#cmus-remote control
+bindsym $mod+Control+Left exec cmus-remote --prev
+bindsym $mod+Control+Right exec cmus-remote --next
+bindsym $mod+Control+Down exec cmus-remote --pause
+bindsym $mod+Control+Insert exec cmus-remote --seek +1
+bindsym $mod+Control+Delete exec cmus-remote --seek -1
+bindsym $mod+Control+Home exec cmus-remote --seek +30
+bindsym $mod+Control+End exec cmus-remote --seek -30
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -148,11 +158,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #Colors
-client.focused          #333333 #222222 #e0b365 #2e9ef4
-client.focused_inactive #333333 #2c2e2f #686a6b #484e50
-client.unfocused        #000000 #000000 #456f77 #292d2e
+client.focused          #333333 #222222 #ee9a77 #2e9ef4
+client.focused_inactive #333333 #0a0a0a #686a6b #484e50
+client.unfocused        #000000 #0a0a0a #456f77 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 
+#OLD focused has #e0b365
 #Autostart
 exec gnome-settings-daemon
 exec pkill cinnamon-screensaver

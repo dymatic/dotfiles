@@ -2,27 +2,27 @@ all: i3 emacs xmobar bashrc xresources
 
 .PHONY: i3
 i3:
-	if [ -a ~/.i3/config]; then rm ~/.i3/config; fi;
+	rm ~/.i3/config
 	cp ./i3/config ~/.i3/
-	if [ -a /etc/i3status.conf]; then rm /etc/i3status.conf; fi;
+	rm /etc/i3status.conf
 	cp ./i3/i3status.conf  /etc/
 
 .PHONY: emacs
 emacs: 
-	if [ -a ~/.emacs]; then rm ~/.emacs; fi;
+	rm ~/.emacs
 	cp ./emacs/.emacs ~/
 
 .PHONY: xmobar
 xmobar:
-	if [ -a ~/.xmobarrc]; then rm ~/.xmobarrc; fi;
+	rm ~/.xmobarrc
 	cp ./xmobar/.xmobarrc ~/
 
 .PHONY: bashrc
 bashrc:
-	if [ -a ~/.bashrc]; then rm ~/.bashrc; fi;
+	rm ~/.bashrc
 	cp ./bashrc/.bashrc ~/
 
 .PHONY: xresources
 xresources:
-	if [ -a ~/.Xresources]; then rm ~/.Xresources; fi;
+	rm ~/.Xresources
 	cp ./Xresources/.Xresources ~/
